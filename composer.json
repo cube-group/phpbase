@@ -1,0 +1,54 @@
+{
+  "name": "cube-group/phpbase",
+  "description": "phpbase",
+  "keywords": [
+    "base"
+  ],
+  "authors": [
+    {
+      "name": "linyang",
+      "email": "linyangflash@163.com"
+    },
+    {
+      "name": "chenqionghe"
+    }
+  ],
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "php": ">=5.6",
+    "cube-group/lvalidator": "~1.1.1",
+    "phpoffice/phpspreadsheet": "1.2.0",
+    "gregwar/image": "2.0.22",
+    "gregwar/captcha": "1.1.5",
+    "gregwar/cache": "1.0.12",
+    "christian-riesen/otp": "2.5.0",
+    "swiftmailer/swiftmailer": "5.4.9",
+    "bacon/bacon-qr-code": "1.0.3",
+    "qiniu/php-sdk": "7.2.3",
+    "mpdf/mpdf": "7.0.3",
+    "symfony/var-dumper": "3.4.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "libs\\Auth\\": "src/Auth/",
+      "libs\\Cache\\": "src/Cache/",
+      "libs\\Cdn\\": "src/Cdn/",
+      "libs\\Crypt\\": "src/Crypt/",
+      "libs\\Curl\\": "src/Curl/",
+      "libs\\File\\": "src/File/",
+      "libs\\Image\\": "src/Image/",
+      "libs\\Log\\": "src/Log/",
+      "libs\\Mail\\": "src/Mail/",
+      "libs\\Mongo\\": "src/Mongo/",
+      "libs\\Orm\\": "src/Orm/",
+      "libs\\Otp\\": "src/Otp/",
+      "libs\\Pay\\": "src/Pay/",
+      "libs\\Qrcode\\": "src/Qrcode/",
+      "libs\\Queue\\": "src/Queue/",
+      "libs\\Session\\": "src/Session/",
+      "libs\\Utils\\": "src/Utils/"
+    }
+  },
+  "minimum-stability": "dev"
+}
