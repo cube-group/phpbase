@@ -1,6 +1,6 @@
 # PHP开发工具包
 ### PHP版本要求
->= PHP5.6
+* >= PHP5.6
 ### 适用PHP框架
 Yaf、YII2、Laravel
 ### 相关pecl
