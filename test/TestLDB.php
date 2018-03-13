@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../libs/autoload.php';
+require __DIR__ . '/../src/autoload.php';
 
 use \libs\Orm\LDB;
 

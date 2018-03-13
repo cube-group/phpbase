@@ -37,7 +37,7 @@ make install
 * Crypt-字符串加解密
 * Curl-实现了http的get和post请求
 * File-实现了部分文件处理、文件上传、Excel处理、Pdf处理
-* Image-实现了图片基础操作和二维码功能
+* Image-实现了图片基础操作和验证码功能
 * Log-实现了简单的本地日志功能
 * Mail-实现了邮件发送和统一邮件发送功能
 * Mongo-对于mongodb的简单封装

@@ -5,6 +5,9 @@ use Gregwar\Captcha\CaptchaBuilder;
 use Gregwar\Image\Image;
 use libs\Utils\ColorMatrix;
 use libs\Utils\ContentType;
+use BaconQrCode\Renderer\Image\Png;
+use BaconQrCode\Writer;
+use PhpOffice\PhpSpreadsheet\Exception;
 
 /**
  * Class LImage.
@@ -272,5 +275,92 @@ class LImage
         } catch (\Exception $e) {
         }
         return false;
+    }
+
+    /**
+     * 生成png二维码.
+     * @param $text string 文字内容
+     * @param $filename string 文件名称
+     * @param $width int
+     * @param $height int
+     * @param $margin int
+     * @return mixed
+     */
+    public static function qrcodePng($text, $filename = '', $width = 256, $height = 256, $margin = 1)
+    {
+        $sourceFile = $filename ? $filename : (sys_get_temp_dir() . '/' . uniqid() . '.png');
+        $renderer = new Png();
+        $renderer->setHeight($width);
+        $renderer->setWidth($height);
+        $renderer->setMargin($margin);
+        $writer = new Writer($renderer);
+        try {
+            $writer->writeFile($text, $sourceFile);
+        } catch (Exception $e) {
+            echo "";
+            return false;
+        }
+
+        if ($filename) {
+            return $filename;
+        }
+
+        @header('Content-Type: image/png');
+        @readfile($sourceFile);
+        return true;
+    }
+
+
+    /**
+     * 生成带有水印的二维码
+     * @param $text string
+     * @param $waterFile string 水印文件地址
+     * @param $outFile string 新文件地址
+     * @param int $width
+     * @param int $height
+     * @return bool
+     */
+    public static function qrcodePngWithWaterMark($text, $waterFile, $outFile = false, $width = 256, $height = 256, $margin = 1)
+    {
+        if (!is_file($waterFile)) {
+            return false;
+        }
+        $sourceFile = $outFile ? $outFile : (sys_get_temp_dir() . '/' . uniqid() . '.png');
+        $renderer = new Png();
+        $renderer->setHeight($width);
+        $renderer->setWidth($height);
+        $renderer->setMargin($margin);
+        $writer = new Writer($renderer);
+        try {
+            $writer->writeFile($text, $sourceFile);
+        } catch (Exception $e) {
+            echo "";
+            return false;
+        }
+
+        if (!is_file($sourceFile)) {
+            return false;
+        }
+        if(!$img = @imagecreatefromjpeg($waterFile)){
+            return false;
+        }
+        $waterWidth = imagesx($img);
+        $waterHeight = imagesy($img);
+
+        $result = self::waterMarkImage(
+            $sourceFile,
+            $waterFile,
+            $sourceFile,
+            (int)(($width - $waterWidth) >> 1),
+            (int)(($height - $waterHeight) >> 1),
+            $waterWidth,
+            $waterHeight
+        );
+
+        if (!$outFile) {
+            header('Content-type: ' . ContentType::getFileContentType($sourceFile));
+            readfile($sourceFile);
+        }
+        return $result;
     }
 }
