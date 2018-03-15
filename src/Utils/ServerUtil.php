@@ -116,9 +116,9 @@ class ServerUtil
      * @param string $msg
      * @param int $code
      */
-    public static function output($isSuccess, $data = null, $msg = '', $code = 0)
+    public static function output($data = null, $msg = '', $code = 0)
     {
-        if ($isSuccess) {
+        if (!$code) {
             echo json_encode([
                 'code' => 0,
                 'msg' => $msg,
@@ -126,7 +126,30 @@ class ServerUtil
             ], JSON_UNESCAPED_UNICODE);
         } else {
             echo json_encode([
-                'code' => $code ? $code : 9999,
+                'code' => $code,
+                'msg' => $msg ? $msg : '未知错误',
+            ], JSON_UNESCAPED_UNICODE);
+        }
+    }
+
+    /**
+     * 返回标准输出json
+     * @param null $data
+     * @param string $msg
+     * @param int $code
+     * @return string
+     */
+    public static function outputJson($data = null, $msg = '', $code = 0)
+    {
+        if (!$code) {
+            return json_encode([
+                'code' => 0,
+                'msg' => $msg,
+                'data' => $data,
+            ], JSON_UNESCAPED_UNICODE);
+        } else {
+            return json_encode([
+                'code' => $code,
                 'msg' => $msg ? $msg : '未知错误',
             ], JSON_UNESCAPED_UNICODE);
         }
