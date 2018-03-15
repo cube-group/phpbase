@@ -17,6 +17,10 @@ class ServerUtil
 {
     private static $_startTimer = 0;
 
+    private static $_msg = [];
+
+    private static $_globalMsg = '';
+
     /**
      * 获取当前Url地址
      * @return string
@@ -153,5 +157,33 @@ class ServerUtil
                 'msg' => $msg ? $msg : '未知错误',
             ];
         }
+    }
+
+    public static function set($key, $value)
+    {
+        if ($key) {
+            self::$_msg[$key] = $value;
+        }
+    }
+
+    public static function get($key, $default = '')
+    {
+        return Arrays::sGet(self::$_msg, $key, $default);
+    }
+
+    public static function setMsg($value)
+    {
+        if (!self::$_globalMsg) {
+            self::$_globalMsg = uniqid();
+        }
+        self::set(self::$_globalMsg, $value);
+    }
+
+    public static function getMsg()
+    {
+        if (self::$_globalMsg) {
+            return self::get(self::$_globalMsg);
+        }
+        return '';
     }
 }
