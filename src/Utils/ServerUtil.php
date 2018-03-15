@@ -122,13 +122,13 @@ class ServerUtil
             echo json_encode([
                 'code' => 0,
                 'msg' => $msg,
-                'data' => is_array($data) ? json_encode($data, JSON_UNESCAPED_UNICODE) : $data,
-            ]);
+                'data' => $data,
+            ], JSON_UNESCAPED_UNICODE);
         } else {
             echo json_encode([
                 'code' => $code ? $code : 9999,
                 'msg' => $msg ? $msg : '未知错误',
-            ]);
+            ], JSON_UNESCAPED_UNICODE);
         }
     }
 }
