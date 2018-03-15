@@ -18,6 +18,16 @@ class ServerUtil
     private static $_startTimer = 0;
 
     /**
+     * 获取当前Url地址
+     * @return string
+     */
+    public static function url()
+    {
+        $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
+        return $http_type . $_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"];
+    }
+    
+    /**
      * 获取访问的用户IP
      * @return string
      */
