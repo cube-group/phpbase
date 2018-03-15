@@ -142,16 +142,16 @@ class ServerUtil
     public static function outputJson($data = null, $msg = '', $code = 0)
     {
         if (!$code) {
-            return json_encode([
+            return [
                 'code' => 0,
                 'msg' => $msg,
                 'data' => $data,
-            ], JSON_UNESCAPED_UNICODE);
+            ];
         } else {
-            return json_encode([
+            return [
                 'code' => $code,
                 'msg' => $msg ? $msg : '未知错误',
-            ], JSON_UNESCAPED_UNICODE);
+            ];
         }
     }
 }
