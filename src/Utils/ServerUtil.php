@@ -26,7 +26,7 @@ class ServerUtil
         $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
         return $http_type . $_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"];
     }
-    
+
     /**
      * 获取访问的用户IP
      * @return string
@@ -107,5 +107,28 @@ class ServerUtil
             return -1;
         }
         return (int)((microtime(true) - self::$_startTimer) / 1000);
+    }
+
+    /**
+     * 常規接口類輸出
+     * @param $isSuccess bool
+     * @param null $data
+     * @param string $msg
+     * @param int $code
+     */
+    public static function output($isSuccess, $data = null, $msg = '', $code = 0)
+    {
+        if ($isSuccess) {
+            echo json_encode([
+                'code' => 0,
+                'msg' => $msg,
+                'data' => is_array($data) ? json_encode($data, JSON_UNESCAPED_UNICODE) : $data,
+            ]);
+        } else {
+            echo json_encode([
+                'code' => $code ? $code : 9999,
+                'msg' => $msg ? $msg : '未知错误',
+            ]);
+        }
     }
 }

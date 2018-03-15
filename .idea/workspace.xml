@@ -2,81 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6d18d2d-44f8-4885-9381-0bf5edf3ad73" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/image/qrcode-with-water.png" afterPath="$PROJECT_DIR$/test/image/qrcode-with-water.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/image/qrcode.png" afterPath="$PROJECT_DIR$/test/image/qrcode.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/image/water1.jpg" afterPath="$PROJECT_DIR$/test/image/water1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PHPBASE.iml" afterPath="$PROJECT_DIR$/.idea/PHPBASE.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/composerJson.xml" afterPath="$PROJECT_DIR$/.idea/composerJson.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Auth/LBasicAuth.php" afterPath="$PROJECT_DIR$/src/Auth/LBasicAuth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Auth/README.md" afterPath="$PROJECT_DIR$/src/Auth/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cache/ICache.php" afterPath="$PROJECT_DIR$/src/Cache/ICache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cache/LCache.php" afterPath="$PROJECT_DIR$/src/Cache/LCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cache/LMemcache.php" afterPath="$PROJECT_DIR$/src/Cache/LMemcache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cache/LRedis.php" afterPath="$PROJECT_DIR$/src/Cache/LRedis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crypt/LAes.php" afterPath="$PROJECT_DIR$/src/Crypt/LAes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/File/LFile.php" afterPath="$PROJECT_DIR$/src/File/LFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/File/LPdf.php" afterPath="$PROJECT_DIR$/src/File/LPdf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Log/LLog.php" afterPath="$PROJECT_DIR$/src/Log/LLog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mail/LMail.php" afterPath="$PROJECT_DIR$/src/Mail/LMail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mongo/LMongo.php" afterPath="$PROJECT_DIR$/src/Mongo/LMongo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Orm/README-LActiveRecord.md" afterPath="$PROJECT_DIR$/src/Orm/README-LActiveRecord.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Otp/LOtp.php" afterPath="$PROJECT_DIR$/src/Otp/LOtp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Otp/README.md" afterPath="$PROJECT_DIR$/src/Otp/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/AliPay/LAliPay.php" afterPath="$PROJECT_DIR$/src/Pay/AliPay/LAliPay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/AliPay/LAliPayApp.php" afterPath="$PROJECT_DIR$/src/Pay/AliPay/LAliPayApp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/AliPay/LAliPayCallback.php" afterPath="$PROJECT_DIR$/src/Pay/AliPay/LAliPayCallback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/AliPay/LAliTool.php" afterPath="$PROJECT_DIR$/src/Pay/AliPay/LAliTool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/Error/LPayError.php" afterPath="$PROJECT_DIR$/src/Pay/Error/LPayError.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/ILPay.php" afterPath="$PROJECT_DIR$/src/Pay/ILPay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/ILPayReturn.php" afterPath="$PROJECT_DIR$/src/Pay/ILPayReturn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/LPay.php" afterPath="$PROJECT_DIR$/src/Pay/LPay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/LPayCallback.php" afterPath="$PROJECT_DIR$/src/Pay/LPayCallback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/LPayConfig.php" afterPath="$PROJECT_DIR$/src/Pay/LPayConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/LPayTool.php" afterPath="$PROJECT_DIR$/src/Pay/LPayTool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/README-LAliPay.md" afterPath="$PROJECT_DIR$/src/Pay/README-LAliPay.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/README-LWechatPay.md" afterPath="$PROJECT_DIR$/src/Pay/README-LWechatPay.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPay.php" afterPath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPayApp.php" afterPath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPayApp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPayCallback.php" afterPath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPayCallback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPayQrcode.php" afterPath="$PROJECT_DIR$/src/Pay/WeChat/LWechatPayQrcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/YeePay/LYeePay.php" afterPath="$PROJECT_DIR$/src/Pay/YeePay/LYeePay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/YeePay/LYeePayCallback.php" afterPath="$PROJECT_DIR$/src/Pay/YeePay/LYeePayCallback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/YeePay/LYeePayOneKey.php" afterPath="$PROJECT_DIR$/src/Pay/YeePay/LYeePayOneKey.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pay/YeePay/LYeepayTool.php" afterPath="$PROJECT_DIR$/src/Pay/YeePay/LYeepayTool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Queue/LHttpRabbitMQ.php" afterPath="$PROJECT_DIR$/src/Queue/LHttpRabbitMQ.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Session/README-LRedisSession.md" afterPath="$PROJECT_DIR$/src/Session/README-LRedisSession.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Session/Session.php" afterPath="$PROJECT_DIR$/src/Session/Session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Arrays.php" afterPath="$PROJECT_DIR$/src/Utils/Arrays.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/CommonUtil.php" afterPath="$PROJECT_DIR$/src/Utils/CommonUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/HttpUtil.php" afterPath="$PROJECT_DIR$/src/Utils/HttpUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/LResult.php" afterPath="$PROJECT_DIR$/src/Utils/LResult.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/SerializeUtil.php" afterPath="$PROJECT_DIR$/src/Utils/SerializeUtil.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/ServerUtil.php" afterPath="$PROJECT_DIR$/src/Utils/ServerUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Strings.php" afterPath="$PROJECT_DIR$/src/Utils/Strings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/TimeUtil.php" afterPath="$PROJECT_DIR$/src/Utils/TimeUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/URLUtil.php" afterPath="$PROJECT_DIR$/src/Utils/URLUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/XMLUtil.php" afterPath="$PROJECT_DIR$/src/Utils/XMLUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/autoload.php" afterPath="$PROJECT_DIR$/src/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLActiveRecord.php" afterPath="$PROJECT_DIR$/test/TestLActiveRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLDB.php" afterPath="$PROJECT_DIR$/test/TestLDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLDBAll.php" afterPath="$PROJECT_DIR$/test/TestLDBAll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLExcel.php" afterPath="$PROJECT_DIR$/test/TestLExcel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLFile.php" afterPath="$PROJECT_DIR$/test/TestLFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLOtp.php" afterPath="$PROJECT_DIR$/test/TestLOtp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLPay.php" afterPath="$PROJECT_DIR$/test/TestLPay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/TestLRedis.php" afterPath="$PROJECT_DIR$/test/TestLRedis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/Task.php" afterPath="$PROJECT_DIR$/test/models/Task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/TaskQuery.php" afterPath="$PROJECT_DIR$/test/models/TaskQuery.php" />
     </list>
     <ignored path="PHPBASE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,8 +40,18 @@
       <file leaf-file-name="ServerUtil.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Utils/ServerUtil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="339">
+              <caret line="129" column="46" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LResult.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/LResult.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -250,6 +186,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PHPBASE" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHPBASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHPBASE" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,12 +359,12 @@
       <workItem from="1517490250099" duration="693000" />
       <workItem from="1520772979520" duration="6434000" />
       <workItem from="1520816006469" duration="13583000" />
-      <workItem from="1521102608411" duration="26000" />
+      <workItem from="1521102608411" duration="1619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20736000" />
+    <option name="totallyTimeSpent" value="22329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="741" extended-state="6" />
@@ -424,9 +374,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31029186" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31029186" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -435,7 +386,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -456,20 +406,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Utils/URLUtil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/TimeUtil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Strings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -754,10 +690,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/CommonUtil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/LResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/ServerUtil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="339">
+          <caret line="129" column="46" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
           <folding />
         </state>
       </provider>
