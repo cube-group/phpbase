@@ -20,10 +20,11 @@ class LPdf
     /**
      * 直接输出pdf
      */
-    public static function outputOnline($html, $tmpDir = '')
+    public static function outputOnline($html, $basePath = '', $tmpDir = '')
     {
         $mpdf = new Mpdf(['tempDir' => $tmpDir ? $tmpDir : sys_get_temp_dir()]);
         $mpdf->WriteHTML($html);
+        $mpdf->basepath = 'http://localhost:63342/PHPBASE';
         $mpdf->Output();
     }
 

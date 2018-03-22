@@ -44,7 +44,6 @@
       "libs\\Orm\\": "src/Orm/",
       "libs\\Otp\\": "src/Otp/",
       "libs\\Pay\\": "src/Pay/",
-      "libs\\Qrcode\\": "src/Qrcode/",
       "libs\\Queue\\": "src/Queue/",
       "libs\\Session\\": "src/Session/",
       "libs\\Utils\\": "src/Utils/"
