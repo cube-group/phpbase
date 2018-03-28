@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c721e2d147ae2a513041b5c50a1723da",
+    "content-hash": "760c3ddc789ae2c1c05005147ed20210",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -303,47 +303,35 @@
         },
         {
             "name": "mpdf/mpdf",
-            "version": "v7.0.3",
+            "version": "v6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "5681a0cae1eea197143d5d27f06e19b0523cd8d6"
+                "reference": "e7310ce53b5c11db1f0b781fe0a69066608ac6e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/mpdf/mpdf/5681a0cae1eea197143d5d27f06e19b0523cd8d6.zip",
-                "reference": "5681a0cae1eea197143d5d27f06e19b0523cd8d6",
+                "url": "https://files.phpcomposer.com/files/mpdf/mpdf/e7310ce53b5c11db1f0b781fe0a69066608ac6e2.zip",
+                "reference": "e7310ce53b5c11db1f0b781fe0a69066608ac6e2",
                 "shasum": ""
             },
             "require": {
-                "ext-gd": "*",
                 "ext-mbstring": "*",
-                "paragonie/random_compat": "^1.4|^2.0",
-                "php": "^5.6 || ~7.0.0 || ~7.1.0 || ~7.2.0",
-                "psr/log": "^1.0",
+                "php": "^5.4.0 || 7.0.*",
                 "setasign/fpdi": "1.6.*"
             },
             "require-dev": {
-                "mockery/mockery": "^0.9.5",
-                "phpunit/phpunit": "^5.0",
-                "squizlabs/php_codesniffer": "^2.7.0",
-                "tracy/tracy": "^2.4"
+                "phpunit/phpunit": "^4.7"
             },
             "suggest": {
-                "ext-bcmath": "Needed for generation of some types of barcodes",
-                "ext-xml": "Needed mainly for SVG manipulation",
                 "ext-zlib": "Needed for compression of embedded resources, such as fonts"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-development": "7.0-dev"
-                }
-            },
             "autoload": {
-                "psr-4": {
-                    "Mpdf\\": "src/"
-                }
+                "classmap": [
+                    "mpdf.php",
+                    "classes"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -351,22 +339,18 @@
             ],
             "authors": [
                 {
-                    "name": "Matěj Humpál",
-                    "role": "Developer, maintainer"
-                },
-                {
                     "name": "Ian Back",
-                    "role": "Developer (retired)"
+                    "role": "Developer"
                 }
             ],
             "description": "A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support",
-            "homepage": "https://mpdf.github.io",
+            "homepage": "http://mpdf.github.io",
             "keywords": [
                 "pdf",
                 "php",
                 "utf-8"
             ],
-            "time": "2018-01-03T07:32:36+00:00"
+            "time": "2017-07-09T16:46:12+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -563,53 +547,6 @@
                 "xlsx"
             ],
             "time": "2018-03-04T20:41:15+00:00"
-        },
-        {
-            "name": "psr/log",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/php-fig/log/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d.zip",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "psr/simple-cache",
