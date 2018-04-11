@@ -1,11 +1,7 @@
 <?php
 
-namespace libs\Utils;
+namespace Base\Utils;
 
-/**
- * Author: qian lei
- * Date: 12/22/14
- */
 class CommonUtil
 {
     /**
@@ -161,61 +157,6 @@ class CommonUtil
     }
 
     /**
-     * json 输出
-     *
-     * @param string $status Y OR N
-     * @param $data
-     * @param boolean $original 是否直接输出json数据
-     */
-    public static function jsonOutput($status, $data = [], $original = false)
-    {
-        if ($original) {
-            $rt = $data;
-        } else {
-            $rt = array('status' => $status);
-            if ($status == 'Y') {
-                $rt = CMap::mergeArray($rt, $data);
-            } else {
-                $rt['errMsg'] = $data;
-            }
-        }
-        echo CJSON::encode($rt);
-        Yii::app()->end();
-    }
-
-    /**
-     * js弹框
-     *
-     * @param string $message
-     */
-    public static function jsAlert($message)
-    {
-        $script = <<<JS
-             <script type="text/javascript">
-                alert("{$message}");
-                history.go(-1);
-                window.close();
-             </script>
-JS;
-        header("Content-type: text/html; charset=utf-8");
-        Yii::app()->end($script);
-    }
-
-    /**
-     * 随机红包值
-     *
-     * @param int $min 最小值
-     * @param int $max 最大值
-     * @param int $offset 跨步
-     * @return mixed
-     */
-    public static function getRandGift($min = 30, $max = 100, $offset = 10)
-    {
-        $data = range($min, $max, $offset);
-        return $data[array_rand($data)];
-    }
-
-    /**
      * 检测是否是合法的大陆手机号
      *
      * @param string $v
@@ -246,38 +187,6 @@ JS;
     public static function isTel($v)
     {
         return !empty($v) ? preg_match('/(\d{4}-|\d{3}-)?(\d{8}|\d{7})/', $v) : false;
-    }
-
-    /**
-     * 检测是否是合法的大陆车牌号码
-     *
-     * @param string $v
-     * @return bool|int
-     */
-    public static function isPlate($v)
-    {
-        return !empty($v) ? preg_match('/^[\x{4e00}-\x{9fa5}]{1}[a-zA-Z]{1}[a-zA-Z_0-9]{4}[a-zA-Z_0-9_\x{4e00}-\x{9fa5}]$/u', $v) : false;
-    }
-
-    /**
-     * 强制二级域名访问模块
-     *
-     * @param string $moduleId
-     * @throws CException
-     */
-    public static function moduleRedirect($moduleId)
-    {
-        if (stristr(SITE_URL, $moduleId) === false) {
-            $url = parse_url(SITE_URL);
-            if (count(explode('.', $url['host'])) > 2) {
-                $mainHost = strstr($url['host'], '.');
-            } else {
-                $mainHost = '.' . $url['host'];
-            }
-            $redirect = $url['scheme'] . "://{$moduleId}" . $mainHost . str_ireplace("/{$moduleId}", '', G::request()->getRequestUri());
-            header('Location:' . $redirect);
-            exit;
-        }
     }
 
     /**
@@ -439,49 +348,6 @@ JS;
     }
 
     /**
-     * 获得手机号码归属地
-     * @param string $mobile
-     * @return array
-     */
-    public static function mobileQuery($mobile)
-    {
-        if (!self::isMobile($mobile)) {
-            return false;
-        }
-
-        $data = [];
-        $api = 'http://apis.juhe.cn/mobile/get?phone=' . $mobile . '&key=850fee75c17f4025cf0f0a6ef9104f31';
-        $curl = Yii::app()->curl;
-        if ($rt = $curl->exec($api, '', false, 5)) {
-            if ($rt['resultcode'] == 200) {
-                $data['province'] = $rt['result']['province'];
-                $data['city'] = $rt['result']['city'];
-                $data['supplier'] = $rt['result']['company'];
-            }
-        }
-        return $data;
-    }
-
-    /**
-     * 手机号类型
-     * @param $mobile
-     * @return int
-     */
-    public static function getMobileType($mobile)
-    {
-        if (!self::isMobile($mobile) || (!$rt = self::mobileQuery($mobile))) {
-            return false;
-        }
-
-        foreach ([1 => '移动', 2 => '联通', 3 => '电信'] as $k => $v) {
-            if (strstr($rt['supplier'], $v) !== false) {
-                return $k;
-            }
-        }
-        return -1;
-    }
-
-    /**
      * 检测是否是合法银行卡号
      * @param string $v
      * @return bool|int
@@ -597,7 +463,7 @@ JS;
 
     /**
      * @use 生成指定位数的随机小写字母字符串
-     * @param $len 字符长度
+     * @param $len int
      * return string
      */
     public static function createRandomString($len)
@@ -611,49 +477,6 @@ JS;
         }
 
         return $str;
-    }
-
-    /**
-     * 处理从接口处获得的错误信息并返回
-     *
-     * @param string|array $msg 接口返回的错误信息数组
-     * @return string
-     */
-    public static function returnAjaxErrorMsg($msg)
-    {
-        $error = '';
-        if (is_array($msg)) {
-            foreach ($msg as $item) {
-                $error .= $item . "\r\n";
-            }
-        } else {
-            $error = $msg;
-        }
-        return $error;
-    }
-
-    /**
-     * 将装货日期格式转换成时间戳
-     *
-     * @param int $timestamp 1452614400
-     * @param string $time 18:00-20:00
-     * @param string $timeType start|end
-     * @return int
-     */
-    public static function getTs($timestamp, $time = '', $timeType = '')
-    {
-        $ts = 0;
-        if ($time != '') {
-            list($start, $end) = explode('-', $time);
-            list($sHour, $sMinute) = explode(':', $start);
-            list($eHour, $eMinute) = explode(':', $end);
-            if ($timeType == 'start') {
-                $ts = intval($sHour) * 3600 + intval($sMinute) * 60;
-            } else {
-                $ts = intval($eHour) * 3600 + intval($eMinute) * 60;
-            }
-        }
-        return $timestamp + $ts;
     }
 
     /**
@@ -690,65 +513,6 @@ JS;
     public static function hideBankCard($bankCard, $start = 6)
     {
         return $bankCard ? str_replace(substr($bankCard, $start, 6), '******', $bankCard) : '';
-    }
-
-    /**
-     * 返回datatable插件显示需要的格式
-     *
-     * @param array $list 数据
-     * @param string|int $count 总页数
-     * @param string $draw
-     * @param array $extra
-     * @return array
-     */
-    public static function dataForDatatable($list = [], $count = '', $draw = '', $extra = [])
-    {
-        return [
-            "draw" => intval(empty($draw) ? $_REQUEST['draw'] : $draw),
-            "recordsFiltered" => intval($count),
-            "data" => ArrayUtil::associate2Index($list),
-            'extra' => $extra
-        ];
-    }
-
-    /**
-     * 根据询价阶段所选常用地址带出联系人信息
-     *
-     * @param $id
-     * @return mixed
-     */
-    public static function getSimpleContact($id)
-    {
-        $rs = ['name' => '', 'mobile' => ''];
-        if ($id) {
-            $contact = new Contact();
-            $result = $contact->contactDetail($id);
-            if (isset($result['code']) && $result['code'] == 1) {
-                $rs = [
-                    'name' => $result['data']['name'],
-                    'mobile' => $result['data']['mobile']
-                ];
-            }
-        }
-        return $rs;
-    }
-
-    /**
-     * 因为财务系统的价格展示方式的数字跟客户系统的不同，需要进行转换
-     * 对应关系看$fykcShowpricetype，健是客户系统，值是财务系统，含义看注释
-     *
-     * @param $showPriceType string|int 财务系统的价格展示方式
-     * @return mixed
-     */
-    public static function handlerShowPriceType($showPriceType)
-    {
-        $fykcShowpricetype = [
-            '0' => '1', #运费
-            '1' => '3', #运费＋税费
-            '2' => '2', #运费＋保费
-            '3' => '4'  #运费＋保费＋税费
-        ];
-        return $fykcShowpricetype[$showPriceType];
     }
 
     /**

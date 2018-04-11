@@ -54,11 +54,10 @@ abstract class LActiveRecord implements ArrayAccess, IteratorAggregate, JsonSeri
 
     /**
      * AR constructor.
-     * @param $db LDB
      */
-    public function __construct($db)
+    public function __construct()
     {
-        $this->_db = $db;
+        $this->_db = $this->database();
         $this->setTrueTableName();
     }
 
@@ -68,6 +67,21 @@ abstract class LActiveRecord implements ArrayAccess, IteratorAggregate, JsonSeri
      * @return mixed
      */
     abstract function tableName();
+
+    /**
+     * 数据连接LDB
+     * @return LDB
+     */
+    abstract function database();
+
+    /**
+     * 获取数据库连接实例
+     * @return LDB|mixed
+     */
+    public function getDb()
+    {
+        return $this->_db;
+    }
 
     /**
      * 创建查询对象
@@ -589,7 +603,7 @@ abstract class LActiveRecord implements ArrayAccess, IteratorAggregate, JsonSeri
         $option = $this->_db->getOptions();
         if ($prefix = Arrays::get($option, 'prefix')) {
             if ($prefix != substr($this->trueTableName, 0, strlen($prefix))) {
-                $this->trueTableName= $prefix .  $this->trueTableName;
+                $this->trueTableName = $prefix . $this->trueTableName;
             }
         }
     }
