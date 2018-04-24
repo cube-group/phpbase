@@ -7,5 +7,5 @@
  */
 require __DIR__ . '/../src/autoload.php';
 
-$page = new \libs\Utils\Page(1, 10, 10, ['uid' => 3]);
+$page = \libs\Utils\PageUtil::create(1, 10, 10, ['uid' => 3]);
 echo $page->getPagination('/index');

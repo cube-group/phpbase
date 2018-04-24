@@ -8,12 +8,28 @@ namespace libs\Utils;
  * @author chenqionghe
  * @package libs\Utils
  */
-class Page
+class PageUtil
 {
-    private $page = 1;
-    private $total = 1;
-    private $pageSize = 10;
-    private $gets = [];
+    /**
+     * 当前页码
+     * @var int
+     */
+    public $page = 1;
+    /**
+     * 总条数
+     * @var int
+     */
+    public $total = 1;
+    /**
+     * 每页显示条数
+     * @var int
+     */
+    public $pageSize = 10;
+    /**
+     * url的get参数集
+     * @var array
+     */
+    public $gets = [];
 
     /**
      * Page constructor.
@@ -21,9 +37,11 @@ class Page
      * @param int $pageSize 每页显示条数
      * @param int $page 当前页码
      * @param array $gets url携带get参数数组
+     * @return self
      */
-    public function __construct($totalPage, $pageSize = 10, $page = 1, $gets = [])
+    public static function create($totalPage, $pageSize = 10, $page = 1, $gets = [])
     {
+        $p = new PageUtil();
         if ($pageSize < 1) {
             $pageSize = 1;
         }
@@ -36,10 +54,11 @@ class Page
             $page = $total;
         }
 
-        $this->page = $page;
-        $this->gets = $gets;
-        $this->total = $total;
-        $this->pageSize = $pageSize;
+        $p->page = $page;
+        $p->gets = $gets;
+        $p->total = $total;
+        $p->pageSize = $pageSize;
+        return $p;
     }
 
     /**
@@ -220,6 +239,4 @@ class Page
     {
         return $pageSize < 1 ? -1 : $pageSize;
     }
-
-
 }
